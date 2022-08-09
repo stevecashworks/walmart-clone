@@ -5,12 +5,16 @@
         display:flex;
         width:100%;
         justify-content:space-around;
-        height:50px;
+        height:80px;
+        align-items:center;
     }
     .header-top-left{
         display:flex;
         width:30%;
         justify-content: space-around;
+        .comp-logo{
+            max-height:40px;
+        }
         .department{
             display:flex;
             align-items: center;
@@ -22,24 +26,23 @@
         background-color:white;
         width:400px;
         align-items: center;
-        border-radius:20px ;
+        border-radius:25px ;
         padding: 10px;
         padding-right:0px;
+        width:700px;
+        max-height:20px;
         .header-top-inp{
             flex:8;
             height:80%;
             font-size:18px;
             border:0;
             outline: none;
-            ::placeholder{
-                margin:10px;
-                color:black;
-            }
         }
     .search-icon-con{
       background-color:orange;
       color:black;
       height:40px;
+      opacity:0.8;
       width:40px;
       border-radius: 50%;
       display: flex;

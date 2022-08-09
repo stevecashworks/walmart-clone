@@ -6,7 +6,7 @@ const Header = () => {
      return (<div className='header'>
       <div className='header-top'>
         <div className="header-top-left">
-        <img alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
+        <img class="comp-logo" alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
         
       
     <div className='department'>
@@ -24,6 +24,16 @@ const Header = () => {
      <input placeholder='Search....' className='header-top-inp'/>
      <div className='search-icon-con'>
       <AiOutlineSearch className='header-top-search'/>
+     </div>
+     <div className='header-top-right'></div>
+     <div className='header-top-right-option'>
+
+     </div>
+     <div className='header-top-right-option'>
+      
+     </div>
+     <div className='header-top-right-option'>
+      
      </div>
   </div>
     
