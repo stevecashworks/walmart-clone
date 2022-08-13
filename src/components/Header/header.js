@@ -1,7 +1,10 @@
 import './header.scss' 
 import {BsXDiamond} from 'react-icons/bs'
 import {AiOutlineSearch} from 'react-icons/ai';
-import {useState,useEffect} from 'react';
+import {RiShoppingCartLine} from 'react-icons/ri'
+import {RiShareForwardBoxLine} from  "react-icons/ri"
+     
+     import {BsPerson} from 'react-icons/bs'
 const Header = () => {
      return (<div className='header'>
       <div className='header-top'>
@@ -21,23 +24,35 @@ const Header = () => {
         </div>
    
   <div className='searchinp'>
-     <input placeholder='Search....' className='header-top-inp'/>
+     <input placeholder='Search  everything at walmart or in online store .... ' className='header-top-inp'/>
      <div className='search-icon-con'>
       <AiOutlineSearch className='header-top-search'/>
      </div>
-     <div className='header-top-right'></div>
-     <div className='header-top-right-option'>
-
-     </div>
-     <div className='header-top-right-option'>
-      
-     </div>
-     <div className='header-top-right-option'>
-      
-     </div>
+   
   </div>
+  <div className='header-top-right'>
+
+     <div className='header-top-right-option'>
+     <RiShareForwardBoxLine/>
+     <div>
+      <div className="top-right-option">Reorder</div>
+      <div className="top-right-bolded-option">My items</div>
+     </div>
+ 
+     </div>
+     <div className='header-top-right-option'>
+     <BsPerson/>
+     <div>
+      <div className='top-right-option'>sign in</div>
+      <div className='top-right-bolded-option'>account</div>
+     </div>
+     </div>
+     <div className='header-top-right-option'>
+     <RiShoppingCartLine/>
+     </div>
     
      
+  </div>
     </div>
      <hr/>
       <div className='header-bottom'></div>
