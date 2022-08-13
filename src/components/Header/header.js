@@ -12,11 +12,11 @@ const Header = () => {
         <img class="comp-logo" alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
         
       
-    <div className='department'>
+    <div className='department hover-blue'>
     <BsXDiamond className='four-dots'/> 
      <p>Departments</p>
      </div>
-     <div className='department'>
+     <div className='department hover-blue'>
     <BsXDiamond className='four-dots'/>
      <p>Services</p> 
      </div>
@@ -32,7 +32,7 @@ const Header = () => {
   </div>
   <div className='header-top-right'>
 
-     <div className='header-top-right-option'>
+     <div className='header-top-right-option hover-blue'>
      <RiShareForwardBoxLine/>
      <div>
       <div className="top-right-option">Reorder</div>
@@ -40,14 +40,14 @@ const Header = () => {
      </div>
  
      </div>
-     <div className='header-top-right-option'>
+     <div className='header-top-right-option hover-blue'>
      <BsPerson/>
      <div>
       <div className='top-right-option'>sign in</div>
       <div className='top-right-bolded-option'>account</div>
      </div>
      </div>
-     <div className='header-top-right-option'>
+     <div className='header-top-right-option hover-blue'>
      <RiShoppingCartLine/>
      </div>
     
