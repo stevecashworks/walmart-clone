@@ -53,7 +53,7 @@
     }
     .header-top-right{
         display:flex;
-        width:400px;
+        width:300px;
         justify-content: space-around;
         text-transform: capitalize;
         align-items: center;
@@ -62,14 +62,18 @@
             margin-right: 10px;
         }
         svg:nth-child(3){
-            
+            color: black;
         }
         .header-top-right-option{
             display: flex;
 
         }
+        .top-right-option{
+            font-size: 13px;
+        }
         .top-right-bolded-option{
             font-weight: bold;
+
         }
 
     }
