@@ -1,12 +1,21 @@
 .header{
     color:white;
-    background-color:rgb(86, 86, 247);
+    background-color:rgb(62, 62, 255);
+    width: 100vw;
+    z-index: 2;
+    // position: sticky;
+    top:0;
+    transition:all 0.5s  ease;
+    max-height:80px;
+    overflow: hidden;
     .header-top{
         display:flex;
         width:100%;
         justify-content:space-around;
         height:80px;
         align-items:center;
+        
+
 
     }
     .header-top-left{
@@ -29,6 +38,7 @@
         .department:hover{
             svg{
                 background-color: white;
+                color:rgb(62, 62, 255);
                 transform: rotate(0deg);
             }
         }
@@ -97,4 +107,42 @@
     .hover-blue:hover{
         background-color: rgb(11, 11, 223);
     }
+    hr{
+        stroke: 10px;
+        color: white;
+        width: 100vw;
+    }
+    .header-bottom{
+        
+        width: 100vw;
+        height: 30px;
+     .delivery-options{
+        display: flex;
+        p{
+            position: relative;
+            padding: 6px;
+            transition: all 0.5s ease;
+        }
+        p::after{
+            position:relative;
+            content: "";
+            width: 100%;
+            display: block;
+            height: 2px;
+            background: #fff;
+            transition: all 0.5s ease;
+            transform: scaleX(0.1);
+            transform-origin:left ;
+        }
+        p:hover::after{
+            transform: scaleX(1);
+            transform-origin: right;
+        }
+     }    
+    }
+}
+.sticky{
+    
+    max-height:500px;
+    position:sticky;
 }

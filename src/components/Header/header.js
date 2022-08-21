@@ -3,13 +3,25 @@ import {BsXDiamond} from 'react-icons/bs'
 import {AiOutlineSearch} from 'react-icons/ai';
 import {RiShoppingCartLine} from 'react-icons/ri'
 import {RiShareForwardBoxLine} from  "react-icons/ri"
+import {useEffect,useState} from 'react'
      
      import {BsPerson} from 'react-icons/bs'
 const Header = () => {
-     return (<div className='header'>
+      const [headerClass2,setHeaderClass2]=useState('')
+      useEffect(()=>{
+         window.addEventListener("scroll",()=>{
+            if(window.scrollY>0){
+               setHeaderClass2('sticky');
+               return;
+            }
+            setHeaderClass2('')
+         })
+      },[])
+      
+     return (<div className={`header ${headerClass2}`}>
       <div className='header-top'>
         <div className="header-top-left">
-        <img class="comp-logo" alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
+        <img className="comp-logo" alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
         
       
     <div className='department hover-blue'>
@@ -55,7 +67,12 @@ const Header = () => {
   </div>
     </div>
      <hr/>
-      <div className='header-bottom'></div>
+      <div className='header-bottom'>
+         <div className='delivery-options'>
+          <img src={'./deliveryopt.webp'} alt='opt'/>
+            <p>How do you want your items?</p>
+         </div>
+      </div>
     </div>);
 }
  
