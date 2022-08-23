@@ -1,11 +1,12 @@
 import './mid.scss'
-import Card from './Card/card'
+import Card from './Card/card';
+import Rollback from './rollback/rollback.jsx';
 const Mid=()=>{
     
     return(
         <div className="mid">
          <Card/>
-         <div></div>
+         <Rollback/>
          <div></div>
          <div></div>
          <div></div>

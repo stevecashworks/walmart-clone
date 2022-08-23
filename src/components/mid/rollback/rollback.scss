@@ -1,0 +1,13 @@
+.rollback{
+    position: relative;
+    display:flex;
+     flex-direction:column;
+    .rollback-top{
+        display:flex;
+        justify-content: space-between;
+    }
+    img{
+       position:relative;
+        
+    }
+}
