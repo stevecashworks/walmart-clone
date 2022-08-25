@@ -4,10 +4,14 @@ import {AiOutlineSearch} from 'react-icons/ai';
 import {RiShoppingCartLine} from 'react-icons/ri'
 import {RiShareForwardBoxLine} from  "react-icons/ri"
 import {useEffect,useState} from 'react'
+import {HiChevronDown} from 'react-icons/hi'
+import {GoLocation} from 'react-icons/go'
+import {VscHome} from 'react-icons/vsc'
      
-     import {BsPerson} from 'react-icons/bs'
+ import {BsPerson} from 'react-icons/bs'
 const Header = () => {
-      const [headerClass2,setHeaderClass2]=useState('')
+      const [headerClass2,setHeaderClass2]=useState('');
+      const [menuOpen,setMenuOpen]= useState(false)
       useEffect(()=>{
          window.addEventListener("scroll",()=>{
             if(window.scrollY>0){
@@ -69,8 +73,25 @@ const Header = () => {
      <hr/>
       <div className='header-bottom'>
          <div className='delivery-options'>
-          <img src={'./deliveryopt.webp'} alt='opt'/>
+          <img className="header-bottom-img1" src={'https://i5.walmartimages.com/dfw/4ff9c6c9-ad46/k2-_0a671c38-d307-447c-835e-7904ab143c26.v1.png'} alt='opt'/>
             <p>How do you want your items?</p>
+            <HiChevronDown style={{transition:'all 0.5s ease'}} className={menuOpen && 'up'} onClick={()=>{setMenuOpen(!menuOpen)}} />
+            <span style={{position:"relative",margin:'auto 2px'}}>|</span>
+            <GoLocation style={{color:'white',position:"relative" }}/>
+            <p style={{fontWeight:'lighter'}}>Sacramento 18867</p>
+            <VscHome style={{color:"white", margin:'auto 2px'}}/>
+            <p style={{fontWeight:'lighter'}}>Sacramento Supercenter</p>
+         </div>
+         <div className="header-bottom-right">
+            <a href="/" className='header-bottom-link'>Groceries&essentials</a>
+            <a href="/" className='header-bottom-link'>tech</a>
+            <a href="/" className='header-bottom-link'>fashion</a>
+            <a href="/" className='header-bottom-link'>home</a>
+            <a href="/" className='header-bottom-link'>new toys</a>
+            <a href="/" className='header-bottom-link'>National coffee month</a>
+            <a href="/" className='header-bottom-link'>flash picks</a>
+            <a href="/" className='header-bottom-link'>walmart+</a>
+            
          </div>
       </div>
     </div>);

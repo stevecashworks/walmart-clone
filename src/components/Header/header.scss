@@ -116,9 +116,12 @@
     .header-bottom{
         
         width: 100vw;
-        height: 30px;
+        display: flex;
+        justify-content:space-between;
      .delivery-options{
         display: flex;
+        margin-left: 20px;
+        align-items: center;
         p{
             position: relative;
             padding: 6px;
@@ -140,6 +143,32 @@
             transform-origin: right;
         }
      }    
+     
+    }
+    .header-bottom-img1{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+    }
+    .header-bottom-right{
+        display:flex;
+        width: 50%;
+        align-items:center;
+        font-size:14px;
+        justify-content:space-around;
+        .header-bottom-link{
+            color:white;
+            text-decoration:none;
+            transition: all 0.5s  ease-in;
+         }
+        .header-bottom-link:hover{
+            text-decoration:underline
+        }
+
+    }
+    .up{
+        
+        transform: rotate(180deg);
     }
 }
 .sticky{
