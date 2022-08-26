@@ -1,28 +1,21 @@
 import './header.scss' 
+import Headerdd from './header-dropdown/headerdd';
 import {BsXDiamond} from 'react-icons/bs'
 import {AiOutlineSearch} from 'react-icons/ai';
 import {RiShoppingCartLine} from 'react-icons/ri'
 import {RiShareForwardBoxLine} from  "react-icons/ri"
-import {useEffect,useState} from 'react'
+import {useState} from 'react'
 import {HiChevronDown} from 'react-icons/hi'
 import {GoLocation} from 'react-icons/go'
 import {VscHome} from 'react-icons/vsc'
+
      
  import {BsPerson} from 'react-icons/bs'
 const Header = () => {
-      const [headerClass2,setHeaderClass2]=useState('');
+
       const [menuOpen,setMenuOpen]= useState(false)
-      useEffect(()=>{
-         window.addEventListener("scroll",()=>{
-            if(window.scrollY>0){
-               setHeaderClass2('sticky');
-               return;
-            }
-            setHeaderClass2('')
-         })
-      },[])
-      
-     return (<div className={`header ${headerClass2}`}>
+     
+     return (<div className={`header`}>
       <div className='header-top'>
         <div className="header-top-left">
         <img className="comp-logo" alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
@@ -83,7 +76,7 @@ const Header = () => {
             <p style={{fontWeight:'lighter'}}>Sacramento Supercenter</p>
          </div>
          <div className="header-bottom-right">
-            <a href="/" className='header-bottom-link'>Groceries&essentials</a>
+            <a href="/" className='header-bottom-link'>Groceries &amp essentials</a>
             <a href="/" className='header-bottom-link'>tech</a>
             <a href="/" className='header-bottom-link'>fashion</a>
             <a href="/" className='header-bottom-link'>home</a>
@@ -94,6 +87,7 @@ const Header = () => {
             
          </div>
       </div>
+      {menuOpen &&<Headerdd Icon1={GoLocation} Icon2={VscHome}/>}
     </div>);
 }
  

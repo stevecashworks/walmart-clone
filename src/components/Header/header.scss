@@ -1,13 +1,13 @@
 .header{
     color:white;
-    background-color:rgb(62, 62, 255);
+    background-color:var(--walmart-blue);
     width: 100vw;
     z-index: 2;
     font-family: "Roboto", sans-serif;
     // position: sticky;
     top:0;
     transition:all 0.5s  ease;
-    max-height:80px;
+     height: 130px;
     overflow: hidden;
     .header-top{
         display:flex;
@@ -116,6 +116,7 @@
     .header-bottom{
         
         width: 100vw;
+        height:50px;
         display: flex;
         justify-content:space-between;
      .delivery-options{
@@ -127,21 +128,7 @@
             padding: 6px;
             transition: all 0.5s ease;
         }
-        p::after{
-            position:relative;
-            content: "";
-            width: 100%;
-            display: block;
-            height: 2px;
-            background: #fff;
-            transition: all 0.5s ease;
-            transform: scaleX(0.1);
-            transform-origin:left ;
-        }
-        p:hover::after{
-            transform: scaleX(1);
-            transform-origin: right;
-        }
+      
      }    
      
     }
@@ -170,9 +157,4 @@
         
         transform: rotate(180deg);
     }
-}
-.sticky{
-    
-    max-height:500px;
-    position:sticky;
 }
