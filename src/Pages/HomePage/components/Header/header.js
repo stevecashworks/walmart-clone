@@ -4,21 +4,25 @@ import {BsXDiamond} from 'react-icons/bs'
 import {AiOutlineSearch} from 'react-icons/ai';
 import {RiShoppingCartLine} from 'react-icons/ri'
 import {RiShareForwardBoxLine} from  "react-icons/ri"
-import {useState} from 'react'
+import {useContext} from 'react'
 import {HiChevronDown} from 'react-icons/hi'
 import {GoLocation} from 'react-icons/go'
 import {VscHome} from 'react-icons/vsc'
+import { AppContext } from '../../../../App';
+import { toggleDdOpen } from '../../../../state-management/actions';
+import {Link} from 'react-router-dom';
 
      
  import {BsPerson} from 'react-icons/bs'
 const Header = () => {
-
-      const [menuOpen,setMenuOpen]= useState(false)
+ const {state,dispatch}= useContext(AppContext);
+ const {ddOpen,  isLogged}=state
+      
      
      return (<div className={`header`}>
       <div className='header-top'>
         <div className="header-top-left">
-        <img className="comp-logo" alt='walmart-logo' src='https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg'/>
+        <img className="comp-logo" alt='walmart-logo' src='../walmartLogo.svg'/>
         
       
     <div className='department hover-blue'>
@@ -56,9 +60,13 @@ const Header = () => {
       <div className='top-right-bolded-option'>account</div>
      </div>
      </div>
-     <div className='header-top-right-option hover-blue'>
+     <Link to={isLogged?'/cart':'/login'} style={{textDecoration:"none", color:"unset"}}>
+
+     <div className='header-top-right-option hover-blue cart-items'>
      <RiShoppingCartLine/>
+     <p className='cartNo'>{state.count}</p>
      </div>
+     </Link>
     
      
   </div>
@@ -68,7 +76,7 @@ const Header = () => {
          <div className='delivery-options'>
           <img className="header-bottom-img1" src={'https://i5.walmartimages.com/dfw/4ff9c6c9-ad46/k2-_0a671c38-d307-447c-835e-7904ab143c26.v1.png'} alt='opt'/>
             <p>How do you want your items?</p>
-            <HiChevronDown style={{transition:'all 0.5s ease'}} className={menuOpen && 'up'} onClick={()=>{setMenuOpen(!menuOpen)}} />
+            <HiChevronDown style={{transition:'all 0.5s ease'}} className={ddOpen && 'up'} onClick={()=>{dispatch({type:toggleDdOpen})}} />
             <span style={{position:"relative",margin:'auto 2px'}}>|</span>
             <GoLocation style={{color:'white',position:"relative" }}/>
             <p style={{fontWeight:'lighter'}}>Sacramento 18867</p>
@@ -76,7 +84,7 @@ const Header = () => {
             <p style={{fontWeight:'lighter'}}>Sacramento Supercenter</p>
          </div>
          <div className="header-bottom-right">
-            <a href="/" className='header-bottom-link'>Groceries &amp essentials</a>
+            <a href="/" className='header-bottom-link'>Groceries & essentials</a>
             <a href="/" className='header-bottom-link'>tech</a>
             <a href="/" className='header-bottom-link'>fashion</a>
             <a href="/" className='header-bottom-link'>home</a>
@@ -87,7 +95,7 @@ const Header = () => {
             
          </div>
       </div>
-      {menuOpen &&<Headerdd Icon1={GoLocation} Icon2={VscHome}/>}
+      {ddOpen &&<Headerdd Icon1={GoLocation} Icon2={VscHome}/>}
     </div>);
 }
  

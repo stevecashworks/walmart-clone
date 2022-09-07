@@ -4,11 +4,11 @@
     width: 100vw;
     z-index: 2;
     font-family: "Roboto", sans-serif;
-    // position: sticky;
+    position:fixed;
+    
     top:0;
-    transition:all 0.5s  ease;
+transition:all 0.5s  ease;
      height: 130px;
-    overflow: hidden;
     .header-top{
         display:flex;
         width:100%;
@@ -156,5 +156,23 @@
     .up{
         
         transform: rotate(180deg);
+    }
+    .cart-items{
+        position:relative;
+        .cartNo{
+            display:flex;
+            justify-content: center;
+            color:white;
+            background-color: orange;
+            font-size: 12px;
+            font-weight: bold;
+            align-items: center;
+            border-radius:50%;
+            width:20px;
+            height:20px;
+            position:absolute;
+            top:0px;
+            right:10px;
+        }
     }
 }

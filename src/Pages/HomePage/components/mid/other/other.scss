@@ -1,0 +1,16 @@
+.other{
+    .picks{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin:40px;
+      
+        
+    }
+    .other-title{
+        margin-left:10px;
+        font-weight: 500;
+
+    }
+}
